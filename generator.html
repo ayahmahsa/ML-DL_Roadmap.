@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>MODA Generator</title><link rel='stylesheet' href='styles.css'></head><body>
+<header class='site-header glass'><div class='container nav-wrap'><a class='brand' href='index.html'>MODA</a><a class='btn btn-dark' href='results.html'>View Results</a></div></header>
+<main class='container layout'>
+<section class='panel'><h2>AI Generator</h2><form id='generatorForm'>
+<div class='field'><label>Upload Garment</label><input id='garmentUpload' type='file' accept='image/*'></div>
+<img id='garmentPreview' src='https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80' style='width:100%;border-radius:12px;aspect-ratio:4/5;object-fit:cover'>
+<div class='field'><label>Upload Logo (optional)</label><input id='logoUpload' type='file' accept='image/*'></div>
+<div class='field'><label>Model Type</label><select name='modelType'><option>Female</option><option>Male</option><option>Unisex</option></select></div>
+<div class='field'><label>Body Type</label><select name='bodyType'><option>Slim</option><option>Curvy</option><option>Athletic</option><option>Natural</option></select></div>
+<div class='field'><label>Skin Tone</label><select name='skinTone'><option>Fair</option><option>Medium</option><option>Olive</option><option>Brown</option><option>Deep</option></select></div>
+<div class='field'><label>Pose</label><select name='pose'><option>Front standing</option><option>Walking</option><option>Sitting</option><option>Street pose</option><option>Editorial pose</option><option>Over shoulder</option><option>Close-up details</option><option>Full-body</option><option>Half-body</option></select></div>
+<div class='field'><label>Background</label><select name='background'><option>White ecommerce studio</option><option>Grey studio</option><option>Beige editorial studio</option><option>Street</option><option>Night city</option><option>Cafe</option><option>Beach</option><option>Desert</option><option>Luxury hotel</option><option>Rooftop</option><option>Minimal apartment</option><option>Flash photography</option><option>Natural daylight</option></select></div>
+<div class='field'><label>Style</label><select name='style'><option>Pinterest editorial</option><option>Luxury fashion</option><option>Streetwear campaign</option><option>Gen Z aesthetic</option><option>Cinematic</option><option>Clean ecommerce</option><option>Lookbook</option><option>Influencer vibe</option></select></div>
+<div class='field'><label>Ratio</label><select name='ratio'><option>1:1</option><option>4:5</option><option>9:16</option><option>16:9</option></select></div>
+<div class='field'><label>Count</label><select name='count'><option value='1'>1</option><option value='4' selected>4</option><option value='8'>8</option><option value='12'>12</option></select></div>
+<div class='field'><label>Quality</label><select name='quality'><option>Standard</option><option>HD</option><option>Ultra realistic</option></select></div>
+<button class='btn btn-dark' type='submit'>Generate Campaign</button>
+</form></section>
+<section class='panel'><h2>Live Preview</h2><p><strong>Prompt Engine Preview</strong></p><p id='promptPreview' class='card'></p><div id='generatedGrid' class='preview-grid'></div></section>
+</main><script src='app.js'></script></body></html>
